@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "SpongeBob",
+      "image": "https://images.wikia.nocookie.net/__cb20160327100919/disney/images/thumb/e/e6/Judy_Hopps_pose_render.png/130px-0%2C393%2C8%2C356-Judy_Hopps_pose_render.png"
+    },
+    {
+      "id": 2,
+      "name": "Mr. Krabs",
+      "image": "https://images.wikia.nocookie.net/__cb20160328121735/disney/images/thumb/0/0d/Nick_Wilde_Pose_Render.png/130px-0%2C573%2C11%2C518-Nick_Wilde_Pose_Render.png"
+    },
+    {
+      "id": 3,
+      "name": "Squidward",
+      "image": "https://images.wikia.nocookie.net/__cb20160223013415/disney/images/thumb/9/95/Bellwether_Zootopia.png/130px-0%2C1842%2C33%2C1662-Bellwether_Zootopia.png"
+    },
+    {
+      "id": 4,
+      "name": "Dexter",
+      "image": "https://images.wikia.nocookie.net/__cb20160306154403/disney/images/thumb/8/84/Mr._Big_Render.png/130px-0%2C709%2C10%2C637-Mr._Big_Render.png"
+    },
+    {
+      "id": 5,
+      "name": "Courage",
+      "image": "https://images.wikia.nocookie.net/__cb20160317131046/disney/images/thumb/2/25/Clawhauser_Promo.png/130px-0%2C830%2C12%2C746-Clawhauser_Promo.png"
+    },
+    {
+      "id": 6,
+      "name": "Doug Funnie",
+      "image": "https://images.wikia.nocookie.net/__cb20160203165046/disney/images/thumb/b/bc/Zootopia_Bogo_render.png/130px-0%2C591%2C14%2C537-Zootopia_Bogo_render.png"
+    },
+    {
+      "id": 7,
+      "name": "Bugs Bunny",
+      "image": "https://images.wikia.nocookie.net/__cb20151224194629/disney/images/thumb/3/3e/Flash_Zootopia.png/130px-74%2C1040%2C0%2C854-Flash_Zootopia.png"
+    },
+    {
+      "id": 8,
+      "name": "Johnny Bravo",
+      "image": "https://images.wikia.nocookie.net/__cb20170707194452/disney/images/thumb/2/20/Mayor_Lionheart.jpg/130px-0%2C700%2C10%2C629-Mayor_Lionheart.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Tommy Pickles",
+      "image": "https://images.wikia.nocookie.net/__cb20180702234642/disney/images/thumb/8/8c/Finnick_stand.png/130px-0%2C730%2C12%2C658-Finnick_stand.png"
+    },
+    {
+      "id": 10,
+      "name": "Rocko",
+      "image": "https://images.wikia.nocookie.net/__cb20151009223241/disney/images/thumb/a/ac/Gazelle_Zootopia.jpg/130px-0%2C2744%2C102%2C2529-Gazelle_Zootopia.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Captain Planet",
+      "image": "https://images.wikia.nocookie.net/__cb20160512174128/disney/images/thumb/3/32/Otterton_Zootopia_.jpg/130px-0%2C499%2C7%2C448-Otterton_Zootopia_.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Ickis",
+      "image": "https://images.wikia.nocookie.net/__cb20160712052422/disney/images/thumb/9/93/Gideon_Grey.jpg/130px-0%2C576%2C9%2C519-Gideon_Grey.jpg"
+    }
+  ]
+  

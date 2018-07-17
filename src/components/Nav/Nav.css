@@ -1,0 +1,13 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+}
+
+.centernavitem {
+    padding-right: 30px;
+}
