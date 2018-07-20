@@ -2,10 +2,10 @@ import React from "react";
 import "./Nav.css";
 
 
-const Nav = () => (
+const Nav = props => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <a className="navbar-brand" href="#">
-      Clicky Game
+      {props.title}
       </a>
 
 
@@ -15,7 +15,10 @@ const Nav = () => (
             Click an image to begin! <span className="sr-only">(current)</span>
         </li>
         <li className="nav-item">
-          Score: <span class="countScore">0</span> | Top Score: <span class="countTopScore">0</span>
+          Score: <span class="countScore">{props.score}</span> | Top Score: <span class="countTopScore">{props.highScore}</span>
+          </li>
+          <li className="nav-item">
+         | <span class="scoreMessage">{props.scoreMessage}</span>
           </li>
       </ul>
     </div>
