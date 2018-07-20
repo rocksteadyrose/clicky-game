@@ -3,10 +3,12 @@ import "./CharacterCard.css";
 
 const CharacterCard = props => (
   <div className="card"
-    value={props.id} 
-    onClick={() => props.click(props.id)} className="moveCard">
-        <img alt={props.name} src={props.image} />
-      </div>
+    value={props.id}
+    onClick={() => props.click(props.id)}>
+    <div className="img-container">
+      <img alt={props.name} src={props.image} />
+    </div>
+  </div>
 );
 
 export default CharacterCard;

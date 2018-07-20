@@ -15,10 +15,10 @@ const Nav = props => (
             Click an image to begin! <span className="sr-only">(current)</span>
         </li>
         <li className="nav-item">
-          Score: <span class="countScore">{props.score}</span> | Top Score: <span class="countTopScore">{props.highScore}</span>
+          Score: <span className="countScore">{props.score}</span> | Top Score: <span className="countTopScore">{props.highScore}</span>
           </li>
           <li className="nav-item">
-         | <span class="scoreMessage">{props.scoreMessage}</span>
+         | <span className="scoreMessage">{props.scoreMessage}</span>
           </li>
       </ul>
     </div>
