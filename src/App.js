@@ -7,14 +7,6 @@ import characters from "./characters.json";
 import "./App.css";
 
 
-function shuffleOverCharacters(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]][array[j], array[i]];
-  }
-  return array;
-}
-
 class App extends Component {
   // Setting this.state.characters to the characters json array
   state = {
@@ -67,14 +59,19 @@ class App extends Component {
   };
 
   shuffle = () => {
-    let charactersShuffled = shuffleOverCharacters(characters);
-    this.setState({ characters: charactersShuffled });
-  };
+    let imageArray = characters;
+    for (let i = imageArray.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [imageArray[i], imageArray[j]] = [imageArray[j], imageArray[i]];
+    }
+    return imageArray
+  }
 
   //GAME RENDER
   // Map over this.state.characters and render a CharacterCard component for each character object
   render() {
     return (
+
       <Wrapper>
         <Nav
           title="Zootopia Clicky Game"
@@ -83,16 +80,16 @@ class App extends Component {
           scoreMessage={this.state.scoreMessage} />
         <Title>Click each character without clicking any duplicates!</Title>
         {this.state.characters.map(character => (
-          <CharacterCard
-            key={character.id}
-            reset={this.reset}
-            id={character.id}
-            handleIncrement={this.handleIncrement}
-            click={this.click}
-            name={this.name}
-            image={character.image}
-            shuffle={this.shuffle}
-          />
+            <CharacterCard
+              key={character.id}
+              reset={this.reset}
+              id={character.id}
+              handleIncrement={this.handleIncrement}
+              click={this.click}
+              name={this.name}
+              image={character.image}
+              shuffle={this.shuffle}
+            />
         ))}
       </Wrapper>
     )
