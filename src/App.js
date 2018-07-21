@@ -102,7 +102,7 @@ class App extends Component {
           scoreMessage={this.state.scoreMessage} />
         <Jumbotron
           title="Zootopia Clicky Game"
-          header="Click on an image to earn points, but don't click on any more than once!"
+          header="Click on a character to earn points, but don't click on any character more than once!"
           />
         {this.state.characters.map(character => (
           <CharacterCard
