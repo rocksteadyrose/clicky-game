@@ -18,7 +18,7 @@ const Nav = props => (
           <div className="scoreMessage">
             <span className="scoreCorrect">{props.scoreCorrect}</span>
             <span className="scoreIncorrect">{props.scoreIncorrect}</span>
-            <span className="scoreUpdate">{props.scoreUpdate}</span>
+            <span className="scoreWin">{props.scoreWin}</span>
           </div>
         </li>
       </ul>

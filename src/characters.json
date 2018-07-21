@@ -61,14 +61,14 @@
     },
     {
       "id": 11,
-      "name": "Emmett Otterton",
-      "image": "https://images.wikia.nocookie.net/__cb20160512174128/disney/images/thumb/3/32/Otterton_Zootopia_.jpg/130px-0%2C499%2C7%2C448-Otterton_Zootopia_.jpg",
+      "name": "Koslov",
+      "image": "https://images.wikia.nocookie.net/__cb20160306111857/disney/images/thumb/d/d3/Kozlov_Zootopia.png/130px-0%2C671%2C12%2C606-Kozlov_Zootopia.png",
       "clicked": false
     },
     {
       "id": 12,
-      "name": "Gideon Grey",
-      "image": "https://images.wikia.nocookie.net/__cb20160712052422/disney/images/thumb/9/93/Gideon_Grey.jpg/130px-0%2C576%2C9%2C519-Gideon_Grey.jpg",
+      "name": "Yax",
+      "image": "https://images.wikia.nocookie.net/__cb20160131202854/disney/images/thumb/d/d4/Yax_Zootopia.png/130px-0%2C2451%2C44%2C2212-Yax_Zootopia.png",
       "clicked": false
     }
   ]

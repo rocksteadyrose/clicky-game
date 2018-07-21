@@ -16,7 +16,8 @@ class App extends Component {
     scoreCorrect: "",
     scoreIncorrect: "",
     characters,
-    update: "Click a character to begin!"
+    update: "Click a character to begin!",
+    scoreWin: ""
   };
   //////////////////////////////////////////////////////////////////
 
@@ -24,6 +25,7 @@ class App extends Component {
 
   //CLICK SECTION
   click = id => {
+    const newestScore = this.state.score + 1;
     //If they haven't been clicked, add them to the array
     if (this.state.ifClicked.indexOf(id) === -1) {
       this.handleScoreIncrement();
@@ -36,28 +38,46 @@ class App extends Component {
           update: ""
         }
       );
-      console.log(this.state.ifClicked)
       //if they've been clicked already, reset the game
     } else {
       this.reset();
     }
+
+    if (newestScore === 12) {
+      this.setState({
+        scoreCorrect: ""
+      })
+    } else {
+      this.setState({
+        scoreWin: ""
+      })
+    }
+
   };
 
   //SCORING SECTION
   handleScoreIncrement = () => {
     //Take existing score and add 1 to it
     const newestScore = this.state.score + 1;
+
     // Update score and clear out message
     this.setState({
       score: newestScore,
+      update: ""
     });
+
     //Set high score
     if (newestScore >= this.state.highScore) {
-      this.setState({ highScore: newestScore });
+      this.setState({
+        highScore: newestScore
+      });
     }
     //Winning message if they hit 12
-    else if (newestScore === 12) {
-      this.setState({ scoreUpdate: "You win!" });
+    if (newestScore === 12) {
+      this.setState({
+        scoreWin: "You win!",
+        score: 0,
+      });
     }
     //Shuffle cards
     this.shuffle();
@@ -84,7 +104,8 @@ class App extends Component {
       ifClicked: [],
       update: "",
       scoreIncorrect: "BOOOOO! Click a character to start over.",
-      scoreCorrect: ""
+      scoreCorrect: "",
+      scoreWin: ""
     });
     this.shuffle();
   };
@@ -104,11 +125,12 @@ class App extends Component {
           highScore={this.state.highScore}
           scoreIncorrect={this.state.scoreIncorrect}
           scoreCorrect={this.state.scoreCorrect}
+          scoreWin={this.state.scoreWin}
           scoreMessage={this.state.scoreMessage} />
         <Jumbotron
           title="Zootopia Clicky Game"
-          header="Click on a character to earn points, but don't click on any character more than once!"
-          />
+          header="Click on a character to earn points, but don't click on a ny character more than once!"
+        />
         {this.state.characters.map(character => (
           <CharacterCard
             key={character.id}

@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    padding: 20px;
+    padding: 10px;
     justify-content: space-around;
     align-content: flex-start;
     overflow: auto;
@@ -20,10 +20,28 @@
     color: rgb(25, 119, 25);
 }
 
+@keyframes .scorecorrect {
+    0% {
+      background: red
+    }
+    100% {
+      background: none;
+    }
+  }
+  
+  .scorecorrect:target {
+    animation: highlight 1s;
+  }
+
 .scoreIncorrect {
     color: rgb(148, 21, 21);
 }
 
 .scoreUpdate {
     color: purple;
+}
+
+.scoreWin {
+    margin-left: 10px;
+    font-size: 18px;
 }
