@@ -2,7 +2,7 @@ import React from "react";
 import "./CharacterCard.css";
 
 const CharacterCard = props => (
-  <div className="card"
+  <div className="card hover"
     value={props.id}
     onClick={() => props.click(props.id)}>
     <div className="img-container">

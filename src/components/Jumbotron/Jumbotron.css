@@ -1,0 +1,23 @@
+
+@font-face {
+    font-family: "Zootopia";
+    src: url("Zootopia.otf");
+    font-weight: normal;
+  }
+
+.jumbotron {
+    width: 100%;
+    text-align: center;
+    background: url("zootopia-wallpaper.jpg") center 200%; 
+}
+
+.title {
+    font-size: 50px;
+    font-family: "Zootopia", Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255);
+}
+
+.header {
+    font-weight: 900;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255);
+}
