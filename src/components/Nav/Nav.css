@@ -1,47 +1,141 @@
+@font-face {
+    font-family: "Jungle";
+    src: url("JungleFever.otf");
+    font-weight: normal;
+  }
+
 .navbar {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    padding: 10px;
+    padding: 25px;
     justify-content: space-around;
     align-content: flex-start;
     overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: fixed;
 }
 
+nav li {
+    /* padding: 26px 0; */
+    display: inline-block;
+    margin: 0 40px;
+}
+/* 
 .centernavitem {
     padding-right: 30px;
+} */
+
+.message, .scoreMessage {
+    font-family: "Jungle", Arial, Helvetica, sans-serif
+}
+
+/* .message {
+    font-size: 14px;
+    width: 300px;
+} */
+
+.scoreMessage {
+    width: 370px;
+}
+
+.scores {
+    padding: 0 15px 0;
 }
 
 .scoreMessage {
-    margin-left: 10px;
+	-webkit-animation: scoreMessage 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: scoreMessage 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-.scoreCorrect {
-    color: rgb(25, 119, 25);
-}
-
-@keyframes .scorecorrect {
+ @-webkit-keyframes scoreMessage {
     0% {
-      background: red
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
     }
     100% {
-      background: none;
+      opacity: 1;
+    }
+  }
+  @keyframes scoreMessage {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
     }
   }
   
-  .scorecorrect:target {
-    animation: highlight 1s;
-  }
-
-.scoreIncorrect {
-    color: rgb(148, 21, 21);
-}
-
-.scoreUpdate {
-    color: purple;
+  
+.scoreCorrectColor {
+    color: black;
 }
 
 .scoreWin {
-    margin-left: 10px;
+    font-size: 18px;
+    font-family: "Jungle", Arial, Helvetica, sans-serif
+}
+
+.name {
+    font-size: 15px;
+    font-family: "Jungle", Arial, Helvetica, sans-serif
+}
+
+
+@media screen and (max-width: 1173px) { 
+   .scores {
+       font-size: 13px;
+   }
+  }
+
+
+@media screen and (max-width: 932px) { 
+  nav li {
+   margin-left: 200px;
+}
+
+.name {
+    margin-left: 101px;
+}
+
+.scores {
+    margin-left: -14px;
+}
+
+.scoreIncorrect {
+    margin-left: -65px;
+}
+
+.scores {
     font-size: 18px;
 }
+}
+
+@media screen and (max-width: 500px) { 
+    nav li {
+     margin-left: 50px;
+  }
+ 
+  .name {
+      margin-left: 98px;
+  }
+  
+  .scoreMessage {
+      margin-left: 60px;
+  }
+  
+  
+  .scores {
+      font-size: 18px;
+      margin-left: 120px;
+  }
+  }
+    
+  

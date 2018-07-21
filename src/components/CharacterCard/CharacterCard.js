@@ -1,8 +1,8 @@
 import React from "react";
 import "./CharacterCard.css";
 
-const CharacterCard = props => (
-  <div className="card hover"
+  const CharacterCard = props => (
+  <div className="card hover div wow rubberBand"
     value={props.id}
     onClick={() => props.click(props.id)}>
     <div className="img-container">

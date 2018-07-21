@@ -6,19 +6,21 @@ import Nav from "./components/Nav";
 import characters from "./characters.json";
 import "./App.css";
 
+
+
 //////////////////////////////////////////////////////////////////
 class App extends Component {
+
   // Setting this.state.characters to the characters json array
   state = {
     score: 0,
     highScore: 0,
     ifClicked: [],
-    scoreCorrect: "",
-    scoreIncorrect: "",
+    scoreMessage: "Click a character to begin!",
     characters,
-    update: "Click a character to begin!",
-    scoreWin: ""
   };
+
+
   //////////////////////////////////////////////////////////////////
 
   //GAME FUNCTIONALITY
@@ -33,9 +35,7 @@ class App extends Component {
         {
           //concat joins arrays
           ifClicked: this.state.ifClicked.concat(id),
-          scoreCorrect: "You guessed correctly!",
-          scoreIncorrect: "",
-          update: ""
+          scoreMessage: "You guessed correctly!",
         }
       );
       //if they've been clicked already, reset the game
@@ -43,17 +43,14 @@ class App extends Component {
       this.reset();
     }
 
+    //Setting it to winning number here (and then clearing out array) because it wasn't setting state to score message in handle score increment
     if (newestScore === 12) {
       this.setState({
-        scoreCorrect: ""
+        scoreMessage: "You win!",
+        ifClicked: []
       })
-    } else {
-      this.setState({
-        scoreWin: ""
-      })
-    }
-
   };
+}
 
   //SCORING SECTION
   handleScoreIncrement = () => {
@@ -63,7 +60,6 @@ class App extends Component {
     // Update score and clear out message
     this.setState({
       score: newestScore,
-      update: ""
     });
 
     //Set high score
@@ -72,11 +68,10 @@ class App extends Component {
         highScore: newestScore
       });
     }
-    //Winning message if they hit 12
+    //Resetting score to 0 if they hit 12
     if (newestScore === 12) {
       this.setState({
-        scoreWin: "You win!",
-        score: 0,
+        score: 0
       });
     }
     //Shuffle cards
@@ -103,9 +98,7 @@ class App extends Component {
       highScore: this.state.highScore,
       ifClicked: [],
       update: "",
-      scoreIncorrect: "BOOOOO! Click a character to start over.",
-      scoreCorrect: "",
-      scoreWin: ""
+      scoreMessage: "BOOO! Click a character to start over.",
     });
     this.shuffle();
   };
@@ -120,16 +113,12 @@ class App extends Component {
       <Wrapper>
         <Nav
           title="Zootopia Clicky Game"
-          update={this.state.update}
           score={this.state.score}
           highScore={this.state.highScore}
-          scoreIncorrect={this.state.scoreIncorrect}
-          scoreCorrect={this.state.scoreCorrect}
-          scoreWin={this.state.scoreWin}
-          scoreMessage={this.state.scoreMessage} />
+          scoreMessage={this.state.scoreMessage}/>
         <Jumbotron
           title="Zootopia Clicky Game"
-          header="Click on a character to earn points, but don't click on a ny character more than once!"
+          header="Click on a character to earn points, but don't click on any character more than once!"
         />
         {this.state.characters.map(character => (
           <CharacterCard

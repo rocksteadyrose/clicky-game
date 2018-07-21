@@ -9,7 +9,8 @@
     "react-dom": "^16.4.1",
     "react-hover-image": "^1.0.0",
     "react-scripts": "1.1.4",
-    "react-shuffle": "^2.1.0"
+    "react-shuffle": "^2.1.0",
+    "wow.js": "^1.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
