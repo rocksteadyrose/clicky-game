@@ -13,7 +13,8 @@ class App extends Component {
     score: 0,
     highScore: 0,
     ifClicked: [],
-    scoreMessage: "",
+    scoreCorrect: "",
+    scoreIncorrect: "",
     characters,
     update: "Click a character to begin!"
   };
@@ -29,7 +30,10 @@ class App extends Component {
       this.setState(
         {
           //concat joins arrays
-          ifClicked: this.state.ifClicked.concat(id)
+          ifClicked: this.state.ifClicked.concat(id),
+          scoreCorrect: "You guessed correctly!",
+          scoreIncorrect: "",
+          update: ""
         }
       );
       console.log(this.state.ifClicked)
@@ -46,8 +50,6 @@ class App extends Component {
     // Update score and clear out message
     this.setState({
       score: newestScore,
-      scoreMessage: "",
-      update: "Keep going!"
     });
     //Set high score
     if (newestScore >= this.state.highScore) {
@@ -55,7 +57,7 @@ class App extends Component {
     }
     //Winning message if they hit 12
     else if (newestScore === 12) {
-      this.setState({ scoreMessage: "You win!" });
+      this.setState({ scoreUpdate: "You win!" });
     }
     //Shuffle cards
     this.shuffle();
@@ -80,8 +82,9 @@ class App extends Component {
       score: 0,
       highScore: this.state.highScore,
       ifClicked: [],
-      scoreMessage: "",
-      update: "BOOOOO! Click a character to start over."
+      update: "",
+      scoreIncorrect: "BOOOOO! Click a character to start over.",
+      scoreCorrect: ""
     });
     this.shuffle();
   };
@@ -96,9 +99,11 @@ class App extends Component {
       <Wrapper>
         <Nav
           title="Zootopia Clicky Game"
+          update={this.state.update}
           score={this.state.score}
           highScore={this.state.highScore}
-          update={this.state.update}
+          scoreIncorrect={this.state.scoreIncorrect}
+          scoreCorrect={this.state.scoreCorrect}
           scoreMessage={this.state.scoreMessage} />
         <Jumbotron
           title="Zootopia Clicky Game"

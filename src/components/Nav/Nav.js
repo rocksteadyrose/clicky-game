@@ -9,14 +9,18 @@ const Nav = props => (
     <div className="header" id="navbartitle">
       <ul className="navbar-nav mr-auto">
         <li className="nav-item centernavitem">
-        {props.update} <span className="sr-only">(current)</span>
+          {props.update} <span className="sr-only">(current)</span>
         </li>
         <li className="nav-item">
           Score: <span className="countScore">{props.score}</span> | Top Score: <span className="countTopScore"> {props.highScore}</span>
-          </li>
-          <li className="nav-item">
-         <span className="scoreMessage">{props.scoreMessage}</span>
-          </li>
+        </li>
+        <li className="nav-item">
+          <div className="scoreMessage">
+            <span className="scoreCorrect">{props.scoreCorrect}</span>
+            <span className="scoreIncorrect">{props.scoreIncorrect}</span>
+            <span className="scoreUpdate">{props.scoreUpdate}</span>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
