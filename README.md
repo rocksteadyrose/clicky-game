@@ -12,7 +12,7 @@ For this app, the goal was to break the UI into various components, manage compo
 
 * Each time the user clicks an image, the characters shuffle. The goal is to click a new character each time - without clicking the same one twice.
 
-* The score in the nav bar at the top keeps track of the user's score. 
+* The nav bar at the top keeps track of the user's score. 
   * If you get 12 points, that means you have clicked all 12 characters without clicking the same character more than once, and you've won the game. 
   * If you click the same character twice, the score resets.
   * The score in the nav bar also keeps track of the highest score since the page has been refreshed.
