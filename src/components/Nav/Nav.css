@@ -4,11 +4,12 @@
     font-weight: normal;
   }
 
+
 .navbar {
     width: 100%;
+    height: 12%;
     display: flex;
     flex-flow: row wrap;
-    padding: 25px;
     justify-content: space-around;
     align-content: flex-start;
     overflow: auto;
@@ -17,38 +18,26 @@
 }
 
 nav li {
-    /* padding: 26px 0; */
     display: inline-block;
     margin: 0 40px;
 }
-/* 
-.centernavitem {
-    padding-right: 30px;
-} */
 
-.message, .scoreMessage {
+
+.message, .Messages {
     font-family: "Jungle", Arial, Helvetica, sans-serif
 }
 
-/* .message {
-    font-size: 14px;
-    width: 300px;
+/* .correctMessage {
+    width: 370px;
 } */
 
-.scoreMessage {
-    width: 370px;
+
+.update {
+	-webkit-animation: update 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: update 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-.scores {
-    padding: 0 15px 0;
-}
-
-.scoreMessage {
-	-webkit-animation: scoreMessage 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: scoreMessage 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-
- @-webkit-keyframes scoreMessage {
+ @-webkit-keyframes update {
     0% {
       letter-spacing: -0.5em;
       opacity: 0;
@@ -60,7 +49,7 @@ nav li {
       opacity: 1;
     }
   }
-  @keyframes scoreMessage {
+  @keyframes update {
     0% {
       letter-spacing: -0.5em;
       opacity: 0;
@@ -73,10 +62,6 @@ nav li {
     }
   }
   
-  
-.scoreCorrectColor {
-    color: black;
-}
 
 .scoreWin {
     font-size: 18px;
@@ -88,53 +73,174 @@ nav li {
     font-family: "Jungle", Arial, Helvetica, sans-serif
 }
 
+.scores {
+    font-family: "Jungle", Arial, Helvetica, sans-serif
+}
+
+
+@media screen and (max-width: 1258px) { 
+.incorrectMessage {
+    padding-right: 30px;
+    margin-left: -50px;
+}
+
+.update {
+    display: block;
+}
+
+}
+
+@media screen and (max-width: 1165px) { 
+    .incorrectMessage {
+        font-size: 14px;
+        margin-left: -70px;
+    }
+    }
 
 @media screen and (max-width: 1173px) { 
    .scores {
-       font-size: 13px;
+       font-size: 16px;
    }
+
   }
 
+@media screen and (max-width: 1106px) { 
+.scores {
+    margin-left: -30px;
+    font-size: 14px;
+}
 
-@media screen and (max-width: 932px) { 
-  nav li {
+.correctMessage {
+    padding-right: 100px;
+}
+
+}
+
+@media screen and (max-width: 994px) { 
+    .scores {
+        margin-left: -100px;
+    
+    }
+    }
+     
+ 
+
+@media screen and (max-width: 991px) { 
+  
+    nav {
+        height: 15%;
+    }
+  
+    nav li {
    margin-left: 200px;
 }
 
 .name {
-    margin-left: 101px;
+    margin-left: 102px;
 }
+
+.incorrectMessage {
+    padding-right: 100px;
+    margin-right: 20px;
+    text-align: center;
+}
+
 
 .scores {
-    margin-left: -14px;
-}
-
-.scoreIncorrect {
-    margin-left: -65px;
-}
-
-.scores {
-    font-size: 18px;
+    font-size: 12px;
+    margin-left: 20px; 
 }
 }
 
-@media screen and (max-width: 500px) { 
+@media screen and (max-width: 629px) and (min-width: 550px) { 
+    nav {
+        height: 20%;
+    }
+
+    .correctMessage {
+        padding-right: 60px;
+    }
+
+    .update {
+        margin-left: -20px;
+    }
+
+}
+
+@media screen and (max-width: 576px) { 
+
+    .name {
+        visibility: hidden;
+    }
+
+    nav {
+        height: 14%;
+    }
+}
+
+
+@media screen and (max-width: 549px) { 
     nav li {
      margin-left: 50px;
   }
+
  
   .name {
-      margin-left: 98px;
+      margin-left: 50px;
   }
   
-  .scoreMessage {
-      margin-left: 60px;
+  .correctMessage {
+      margin-left: 40px;
   }
   
+  .update {
+      margin-right: -120px;
+  }
   
   .scores {
       font-size: 18px;
-      margin-left: 120px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+  }
+  }
+    
+  @media screen and (max-width: 437px) { 
+    /* nav li {
+     margin-left: 50px;
+  } */
+
+  navbar {
+      height: 15%;
+  }
+
+  nav {
+      margin-bottom: -3px;
+  }
+ 
+  .name {
+     visibility: hidden;
+  }
+
+  .update {
+      margin-top: 20px;
+  }
+  
+  .correctMessage {
+    font-size: 13px;
+    margin-right: -120px;
+  }
+
+  .incorrectMessage {
+    font-size: 12px;
+    display: block;
+    margin-left: 65px;
+    text-align: center;
+    margin-top: -10px;
+}
+  .scores {
+      font-size: 16px;
+      margin-left: 14px;
+      margin-bottom: 50px;
   }
   }
     

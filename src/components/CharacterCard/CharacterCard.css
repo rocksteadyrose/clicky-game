@@ -159,3 +159,19 @@
       0 0 7px 5px #f0f,
       0 0 9px 11px #0ff;
   }
+
+  @media screen and (min-width: 1210px) { 
+    /* .card > .img-container {
+      height: 100%;
+      overflow: hidden;
+      text-align: center;
+    } */
+    /* .card > .img-container > img {
+      width: 90%;
+      padding-top: 20px;
+      opacity: 1;
+    } */
+    .card {
+      margin: 0px 60px 30px 90px;
+    }
+    }

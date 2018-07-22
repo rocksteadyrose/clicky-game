@@ -16,7 +16,9 @@ class App extends Component {
     score: 0,
     highScore: 0,
     ifClicked: [],
-    scoreMessage: "Click a character to begin!",
+    update: "Click a character to begin!",
+    correctMessage: "",
+    incorrectMessage: "",
     characters,
   };
 
@@ -35,7 +37,9 @@ class App extends Component {
         {
           //concat joins arrays
           ifClicked: this.state.ifClicked.concat(id),
-          scoreMessage: "You guessed correctly!",
+          correctMessage: "You guessed correctly!",
+          incorrectMessage: "",
+          update: ""
         }
       );
       //if they've been clicked already, reset the game
@@ -44,9 +48,9 @@ class App extends Component {
     }
 
     //Setting it to winning number here (and then clearing out array) because it wasn't setting state to score message in handle score increment
-    if (newestScore === 12) {
+    if (newestScore === 12 && this.state.ifClicked.indexOf(id) === -1) {
       this.setState({
-        scoreMessage: "You win!",
+        correctMessage: "You win!",
         ifClicked: []
       })
   };
@@ -68,10 +72,11 @@ class App extends Component {
         highScore: newestScore
       });
     }
-    //Resetting score to 0 if they hit 12
-    if (newestScore === 12) {
+    //Resetting score to 1 if they hit 13 (so that we can give them a score of 12, win the game, and then have them click again to start over). Putting in 'high score' of 12 so it can't go to 13 when they do the next click
+    if (newestScore > 12) {
       this.setState({
-        score: 0
+        score: 1,
+        highScore: 12
       });
     }
     //Shuffle cards
@@ -97,8 +102,8 @@ class App extends Component {
       score: 0,
       highScore: this.state.highScore,
       ifClicked: [],
-      update: "",
-      scoreMessage: "BOOO! Click a character to start over.",
+      correctMessage: "",
+      incorrectMessage: "BOOO! Click a character to start over.",
     });
     this.shuffle();
   };
@@ -115,7 +120,9 @@ class App extends Component {
           title="Zootopia Clicky Game"
           score={this.state.score}
           highScore={this.state.highScore}
-          scoreMessage={this.state.scoreMessage}/>
+          update={this.state.update}
+          correctMessage={this.state.correctMessage}
+          incorrectMessage={this.state.incorrectMessage}/>
         <Jumbotron
           title="Zootopia Clicky Game"
           header="Click on a character to earn points, but don't click on any character more than once!"
