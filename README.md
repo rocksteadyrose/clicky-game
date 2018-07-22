@@ -4,7 +4,7 @@ View the completed app on Heroku <a href="https://rose-clicky-game.herokuapp.com
 
 <img width="1097" alt="screen shot 2018-07-21 at 6 43 13 pm" src="https://user-images.githubusercontent.com/34491285/43040915-54cb423c-8d17-11e8-9a06-869c8a5f546f.png">
 
-For this project, the goal was to break the UI into various components, manage compoent state, and respond to user events using React.
+For this project, the goal was to break the UI into various components, manage component state, and respond to user events using React.
 
 **INSTRUCTIONS:**
 
