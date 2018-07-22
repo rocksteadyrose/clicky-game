@@ -20,7 +20,7 @@ For this app, the goal was to break the UI into various components, manage compo
   
 **Technologies Used:**
 * React
-* Node
+* Node.js
 * Javascript
 * Bootstrap
 * HTML
