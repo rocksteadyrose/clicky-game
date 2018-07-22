@@ -79,6 +79,7 @@ nav li {
 
 
 @media screen and (max-width: 1258px) { 
+
 .incorrectMessage {
     padding-right: 30px;
     margin-left: -50px;
@@ -118,9 +119,12 @@ nav li {
 
 @media screen and (max-width: 994px) { 
     .scores {
-        margin-left: -100px;
-    
+        margin-left: -0px;
     }
+
+    /* nav li {
+        margin-top: 1px;
+    } */
     }
      
  
@@ -244,4 +248,15 @@ nav li {
   }
   }
     
-  
+  @media screen and (max-width: 375px) {
+    .incorrectMessage {
+        margin-right: -10px;
+    }
+
+    .correctMessage {
+        margin-left: 25px;
+    }
+    .update {
+        margin-right: 10px;
+    }
+  }
