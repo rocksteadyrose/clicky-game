@@ -27,14 +27,27 @@ nav li {
     font-family: "Jungle", Arial, Helvetica, sans-serif
 }
 
-/* .correctMessage {
-    width: 370px;
-} */
+.correctMessage {
+    color: rgb(0, 255, 0);
+    -webkit-text-stroke: rgb(5, 54, 5);
+    -webkit-text-stroke-width: .1px;
+}
+
+.incorrectMessage {
+    color: rgb(255, 78, 93);
+    -webkit-text-stroke: rgb(5, 54, 5);
+    -webkit-text-stroke-width: .2px;
+}
+
 
 
 .update {
 	-webkit-animation: update 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: update 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation: update 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            color: white;
+    -webkit-text-stroke: rgb(5, 54, 5);
+    -webkit-text-stroke-width: .1px;
+    text-shadow: 2px 2px 1px #310606;
 }
 
  @-webkit-keyframes update {

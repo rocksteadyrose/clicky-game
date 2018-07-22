@@ -1,7 +1,6 @@
 import React from "react";
 import "./Nav.css";
 
-
 const Nav = props => (
   <nav className="navbar navbar-default navbar-expand-lg navbar-light bg-light sticky-top">
     <div className="header" id="navbartitle">
