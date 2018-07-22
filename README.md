@@ -17,7 +17,8 @@ For this app, the goal was to break the UI into various components, manage compo
   * If you click the same character twice, the score resets.
   * The score in the nav bar also keeps track of the highest score since the page has been refreshed.
   
-  **Technologies Used:**
+  
+**Technologies Used:**
 * React
 * Node
 * Javascript
