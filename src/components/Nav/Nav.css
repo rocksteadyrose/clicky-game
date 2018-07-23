@@ -75,7 +75,15 @@ nav li {
     }
   }
   
-
+  .navbar .correctColor {
+    animation: 1s correctColor;
+  }
+  
+  .navbar .incorrect {
+    animation: 1s incorrectMessage;
+  }
+  
+  
 .scoreWin {
     font-size: 18px;
     font-family: "Jungle", Arial, Helvetica, sans-serif

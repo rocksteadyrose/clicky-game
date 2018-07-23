@@ -134,6 +134,7 @@ class App extends Component {
             click={this.click}
             name={character.name}
             image={character.image}
+            shakiness={!this.state.score && this.state.highScore}
           />
         ))}
       </Wrapper>
