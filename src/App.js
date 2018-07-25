@@ -47,7 +47,7 @@ class App extends Component {
       this.reset();
     }
 
-    //Setting it to winning number here (and then clearing out array) because it wasn't setting state to score message in handle score increment
+    //Setting it to winning number here (and then clearing out array)
     if (newestScore === 12 && this.state.ifClicked.indexOf(id) === -1) {
       this.setState({
         correctMessage: "You win!",
