@@ -1,6 +1,6 @@
 # Zootopia Clicky Game (Memory Game using React)
 
-View the completed app on Heroku <a href="https://rose-clicky-game.herokuapp.com">here</a>
+View the completed app on Heroku <a href="http://bit.ly/roseclickygamecode">here</a>
 
 <img width="1097" alt="screen shot 2018-07-21 at 6 43 13 pm" src="https://user-images.githubusercontent.com/34491285/43040915-54cb423c-8d17-11e8-9a06-869c8a5f546f.png">
 
